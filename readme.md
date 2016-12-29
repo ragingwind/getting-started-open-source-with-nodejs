@@ -1,6 +1,8 @@
 # How to get started Open Source with Node.js
 
-비디오 튜토리얼 소개, 깃허브에서 자바스크립트로 만든 작은 모듈을 개발을 처음부터 끝까지 설명하도록 하겠습니다. 작은 모듈을 실제 프로젝트에 사용되는 유용성 보다는 쉽게 이해하고 테스트 그리고 업데이트가 편한 모듈입니다. 이후 지속적인 업데이트를 통해서 최신 기술을 적용시켜 보도록 하겠습니다. 그리고 깃허브 계정을 만들고 사용하는 방법과 저장소를 활용하는 방법 그리고 그 저장소와 깃을 사용하여 협업하는 방법을 또한 처음부터 소개하도록 하겠습니다. 그리고 마지막으로 제작된 모듈을 npm 에 배포 관리하는 방법까지 알아보도록 하겠습니다
+### 비디오 튜토리얼 소개 
+
+깃허브에서 자바스크립트로 만든 작은 모듈을 개발을 처음부터 끝까지 설명하도록 하겠습니다. 작은 모듈을 실제 프로젝트에 사용되는 유용성 보다는 쉽게 이해하고 테스트 그리고 업데이트가 편한 모듈입니다. 이후 지속적인 업데이트를 통해서 최신 기술을 적용시켜 보도록 하겠습니다. 그리고 깃허브 계정을 만들고 사용하는 방법과 저장소를 활용하는 방법 그리고 그 저장소와 깃을 사용하여 협업하는 방법을 또한 처음부터 소개하도록 하겠습니다. 그리고 마지막으로 제작된 모듈을 npm 에 배포 관리하는 방법까지 알아보도록 하겠습니다
 
 ## 1. Introduction Github
 
@@ -12,7 +14,7 @@
 
 ### 라이센스
 
-이 자료는 에그헤드 아이오에 켄트 닷즈의 Kent C. Dodds 오리지널 시리즈 두개의 아웃라인을 원저자의 허락하에 차용하여 제작되었음을 알려드립니다
+이 자료는 에그헤드 아이오의 켄트 닷즈의 Kent C. Dodds 오리지널 시리즈 두개의 아웃라인을 원저자의 허락하에 차용하여 제작되었음을 알려드립니다
 
 All of contents and outlines originally written by [@kentcdodds](https://twitter.com/kentcdodds). He so much thanksfully allowed me to it is referred and used in this document and videos in Korean. We would recommend to watch the original videos below if you are familiar with English.
 
@@ -271,37 +273,34 @@ npm publish 를 통해서 릴리즈 된 버전을 태킹하여 깃허브에 [태
     - v4
     - v5
     ```
-  ```
 
-- Travis CI 에서 계정 생성 후 리포지터리 연동 활성화
+-   Travis CI 에서 계정 생성 후 리포지터리 연동 활성화
 
-- 커밋 후 푸쉬하여 테스트 코드가 도는 지 확인
+-   커밋 후 푸쉬하여 테스트 코드가 도는 지 확인
 
-- node 의 새로운 버전 추가, `  -v7`
+-   node 의 새로운 버전 추가, `  -v7`
 
 ## 9. Adding Code Coverage Reporting
 
 ### Code Coverage 사용하기
 
-코드 커버리지는 작성된 테스트 코드가 모듈의 API 를 얼마나 잘 커버하고 있는지, 즉 테스트 코드가 충실히 작성되었는지 확인하는 툴입니다. 작성된 API 에 임의의 코드들을 추가하여 테스트 코드에서 호출이 되었는지등을 판단해서 리포팅을 해줍니다. 코드 커버리지는 두가지 파트로 나뉩니다. 실제 코드 커버리지를 테스트 하는 툴과 생성된 리포트를 받아서 다양한 데이터를 보여주고 깃허브와 연동할 수 있는 써드파티 서비스입니다. 
+코드 커버리지는 작성된 테스트 코드가 모듈의 API 를 얼마나 잘 커버하고 있는지, 즉 테스트 코드가 충실히 작성되었는지 확인하는 툴입니다. 작성된 API 에 임의의 코드들을 추가하여 테스트 코드에서 호출이 되었는지등을 판단해서 리포팅을 해줍니다. 코드 커버리÷지는 두가지 파트로 나뉩니다. 실제 코드 커버리지를 테스트 하는 툴과 생성된 리포트를 받아서 다양한 데이터를 보여주고 깃허브와 연동할 수 있는 써드파티 서비스입니다. 
 
-- Istanbul 페이지 가기: 여기에서는 [Istanbul Code Coverage · GitHub](https://goo.gl/F9yICG) 에서 제공하는 niece CLI 툴을 사용할 예정입니다. 빠르고 간단하며 AVA 테스트 프레임웍을 지원합니다
-- 커버올아이오 페이지 가기: 이제 CI 에서 전송된 리포팅 결과를 받아서 보여주고 커버리지에 관련된 여러가지 정보를 제공해주는 서드파티 서비스인 커버올 아이오를 사용할 것입니다. 
-- 커버올아이오 페이지, 가입, 리포팅을 보내고 연동하고자 하는 깃허브 리포지토리를 활성화
-- nyc 와 커버올 클라이언트 설치:`npm install —save-dev nyc coveralls`
-- 테스트 스크립트 수정: `"test": "nyc ava"
-- 테스트 스크립트 실행: `npm test`
+-   Istanbul 페이지 가기: 여기에서는 [Istanbul Code Coverage · GitHub](https://goo.gl/F9yICG) 에서 제공하는 niece CLI 툴을 사용할 예정입니다. 빠르고 간단하며 AVA 테스트 프레임웍을 지원합니다
+-   커버올아이오 페이지 가기: 이제 CI 에서 전송된 리포팅 결과를 받아서 보여주고 커버리지에 관련된 여러가지 정보를 제공해주는 서드파티 서비스인 커버올 아이오를 사용할 것입니다. 
+-   커버올아이오 페이지, 가입, 리포팅을 보내고 연동하고자 하는 깃허브 리포지토리를 활성화
+-   nyc 와 커버올 클라이언트 설치:`npm install —save-dev nyc coveralls`
+-   테스트 스크립트 수정: `"test": "nyc ava"
+-   테스트 스크립트 실행: `npm test`
+-   travis.yml 업데이트:
+    ```yaml
+    after_success:
+        - './node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls'
+    ```
 
-- travis.yml 업데이트:
+-   .gitignore 업데이트: .nyc_output 추가
 
-  ```yaml
-  after_success:
-    - './node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls'
-  ```
-
-- .gitignore 업데이트: .nyc_output 추가
-
-- 커밋, 푸쉬후 CI 로그와 CC 결과 확인
+-   커밋, 푸쉬후 CI 로그와 CC 결과 확인
 
 ## 10. How to fork and clone a Github Repository
 
